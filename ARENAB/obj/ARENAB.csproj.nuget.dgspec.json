@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj": {}
+    "C:\\Users\\dadiaz\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj": {
+    "C:\\Users\\dadiaz\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj",
+        "projectUniqueName": "C:\\Users\\dadiaz\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj",
         "projectName": "ARENAB",
-        "projectPath": "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj",
-        "packagesPath": "C:\\Users\\zperez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\obj\\",
+        "projectPath": "C:\\Users\\dadiaz\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj",
+        "packagesPath": "C:\\Users\\dadiaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dadiaz\\source\\repos\\ARENAB\\ARENAB\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\zperez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dadiaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,6 +91,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.32, 3.1.32]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -95,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
