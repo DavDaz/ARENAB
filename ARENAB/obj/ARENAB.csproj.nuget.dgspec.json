@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dadiaz\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj": {}
+    "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dadiaz\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj": {
+    "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dadiaz\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj",
+        "projectUniqueName": "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj",
         "projectName": "ARENAB",
-        "projectPath": "C:\\Users\\dadiaz\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj",
-        "packagesPath": "C:\\Users\\dadiaz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dadiaz\\source\\repos\\ARENAB\\ARENAB\\obj\\",
+        "projectPath": "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj",
+        "packagesPath": "C:\\Users\\zperez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\dadiaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\zperez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,25 +41,39 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Facebook": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.31, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.31, )"
+              "version": "[3.1.32, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[3.1.31, )"
+              "version": "[3.1.32, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.31, )"
+              "version": "[3.1.32, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.31, )"
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             }
           },
           "imports": [
@@ -77,12 +87,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.32, 3.1.32]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -91,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

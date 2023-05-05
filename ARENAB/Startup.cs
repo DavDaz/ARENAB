@@ -67,6 +67,28 @@ namespace ARENAB
                 options.AccessDeniedPath = "/Identity/Account/AccessDenied";
                 options.SlidingExpiration = true;
             });
+            services.AddAuthentication()
+
+                .AddGoogle(options =>
+                {
+                    options.ClientId = "901866681619-0tdogiltirvgn3niq4bmrulc0mjurh36.apps.googleusercontent.com";
+                    options.ClientSecret = "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";
+                    options.CallbackPath = "/signin-google";
+                });
+
+                //.AddFacebook(options=>
+                //{
+             
+                //}
+               /* )*/
+
+            
+
+
+
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
