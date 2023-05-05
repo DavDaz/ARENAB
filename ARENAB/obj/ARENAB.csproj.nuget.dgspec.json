@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj": {}
+    "C:\\Users\\zperez\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj": {
+    "C:\\Users\\zperez\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj",
+        "projectUniqueName": "C:\\Users\\zperez\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj",
         "projectName": "ARENAB",
-        "projectPath": "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj",
+        "projectPath": "C:\\Users\\zperez\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj",
         "packagesPath": "C:\\Users\\zperez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\obj\\",
+        "outputPath": "C:\\Users\\zperez\\source\\repos\\ARENAB\\ARENAB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zperez\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "IdentityServer4": {
+              "target": "Package",
+              "version": "[4.1.2, )"
+            },
             "Microsoft.AspNetCore.Authentication.Facebook": {
               "target": "Package",
               "version": "[3.1.5, )"

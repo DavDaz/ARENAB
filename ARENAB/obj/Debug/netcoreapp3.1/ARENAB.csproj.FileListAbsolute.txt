@@ -272,3 +272,7 @@ C:\Users\zperez\Source\Repos\ARENAB\ARENAB\obj\Debug\netcoreapp3.1\Razor\Areas\I
 C:\Users\zperez\Source\Repos\ARENAB\ARENAB\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 C:\Users\zperez\Source\Repos\ARENAB\ARENAB\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\zperez\Source\Repos\ARENAB\ARENAB\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\zperez\Source\Repos\ARENAB\ARENAB\bin\Debug\netcoreapp3.1\IdentityModel.dll
+C:\Users\zperez\Source\Repos\ARENAB\ARENAB\bin\Debug\netcoreapp3.1\IdentityServer4.dll
+C:\Users\zperez\Source\Repos\ARENAB\ARENAB\bin\Debug\netcoreapp3.1\IdentityServer4.Storage.dll
+C:\Users\zperez\Source\Repos\ARENAB\ARENAB\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
