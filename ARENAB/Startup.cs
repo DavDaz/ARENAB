@@ -1,6 +1,8 @@
 using ARENAB.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -66,28 +68,32 @@ namespace ARENAB
                 options.LoginPath = "/Identity/Account/Login";
                 options.AccessDeniedPath = "/Identity/Account/AccessDenied";
                 options.SlidingExpiration = true;
+
+                // External authentication settings
+                options.Cookie.SameSite = SameSiteMode.None;
+                options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
             });
+
             services.AddAuthentication()
 
-                .AddGoogle(options =>
-                {
-                    options.ClientId = "901866681619-0tdogiltirvgn3niq4bmrulc0mjurh36.apps.googleusercontent.com";
-                    options.ClientSecret = "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";
-                    options.CallbackPath = "/signin-google";
-                });
+            .AddGoogle(options =>
+            {
+                options.ClientId = "901866681619-0tdogiltirvgn3niq4bmrulc0mjurh36.apps.googleusercontent.com";
+                options.ClientSecret = "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";
+                options.CallbackPath = "/signin-google";
+            })
 
-                //.AddFacebook(options=>
-                //{
-             
-                //}
-               /* )*/
-
-            
-
-
-
-
-
+            .AddOpenIdConnect("oidc", "OpenID Connect", options =>
+             {
+                 options.Authority = "https://demo.identityserver.io/";
+                 options.ClientId = "interactive.public";
+                 options.ClientSecret = "secret";
+                 options.ResponseType = "code";
+                 options.Scope.Add("openid");
+                 options.Scope.Add("profile");
+                 options.SaveTokens = true;
+                 options.GetClaimsFromUserInfoEndpoint = true;
+             });
 
         }
 
@@ -111,7 +117,6 @@ namespace ARENAB
             app.UseRouting();
 
             app.UseAuthentication();
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
@@ -120,6 +125,16 @@ namespace ARENAB
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+            app.UseRouting();
+
+            app.UseAuthentication();
+
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
         }
     }
 }
