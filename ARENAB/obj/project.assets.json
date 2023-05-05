@@ -34,6 +34,25 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Microsoft.AspNetCore.Authentication.OpenIdConnect/3.1.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.5.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.32": {
         "type": "package",
         "compile": {
@@ -3132,6 +3151,21 @@
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.xml",
         "microsoft.aspnetcore.authentication.google.3.1.5.nupkg.sha512",
         "microsoft.aspnetcore.authentication.google.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.OpenIdConnect/3.1.5": {
+      "sha512": "smiwzu/SKFh6Tc0Hb4/NTtOBcsv6zqolGbLwAWTBOHlkbSFzxp4+iZc9t+NkHHJOr/xVxoUo/jahSau3yDdkgw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.openidconnect/3.1.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.OpenIdConnect.xml",
+        "microsoft.aspnetcore.authentication.openidconnect.3.1.5.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.openidconnect.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.32": {
@@ -9253,6 +9287,7 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.AspNetCore.Authentication.Facebook >= 3.1.5",
       "Microsoft.AspNetCore.Authentication.Google >= 3.1.5",
+      "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 3.1.5",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.31",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.32",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.32",
@@ -9267,11 +9302,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj",
+      "projectUniqueName": "C:\\Users\\zperez\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj",
       "projectName": "ARENAB",
-      "projectPath": "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\ARENAB.csproj",
+      "projectPath": "C:\\Users\\zperez\\source\\repos\\ARENAB\\ARENAB\\ARENAB.csproj",
       "packagesPath": "C:\\Users\\zperez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zperez\\Source\\Repos\\ARENAB\\ARENAB\\obj\\",
+      "outputPath": "C:\\Users\\zperez\\source\\repos\\ARENAB\\ARENAB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zperez\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9306,6 +9341,10 @@
             "version": "[3.1.5, )"
           },
           "Microsoft.AspNetCore.Authentication.Google": {
+            "target": "Package",
+            "version": "[3.1.5, )"
+          },
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
             "target": "Package",
             "version": "[3.1.5, )"
           },

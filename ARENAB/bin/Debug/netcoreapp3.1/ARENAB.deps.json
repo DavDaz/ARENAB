@@ -33,6 +33,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Facebook": "3.1.5",
           "Microsoft.AspNetCore.Authentication.Google": "3.1.5",
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "3.1.5",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.31",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.32",
           "Microsoft.AspNetCore.Identity.UI": "3.1.32",
@@ -330,6 +331,20 @@
         },
         "compile": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.OpenIdConnect/3.1.5": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {
+            "assemblyVersion": "3.1.5.0",
+            "fileVersion": "3.100.520.27105"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.32": {
@@ -3961,6 +3976,13 @@
       "sha512": "sha512-5fGJ3eKAEJRqu+cUqC2tVvITrbBx8x5JJbQbpD81Ob1q/My9pDitwaaDSBSkNeQ0J4J33Mub1D+3xS9K/9cTxg==",
       "path": "microsoft.aspnetcore.authentication.google/3.1.5",
       "hashPath": "microsoft.aspnetcore.authentication.google.3.1.5.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.OpenIdConnect/3.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-smiwzu/SKFh6Tc0Hb4/NTtOBcsv6zqolGbLwAWTBOHlkbSFzxp4+iZc9t+NkHHJOr/xVxoUo/jahSau3yDdkgw==",
+      "path": "microsoft.aspnetcore.authentication.openidconnect/3.1.5",
+      "hashPath": "microsoft.aspnetcore.authentication.openidconnect.3.1.5.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.32": {
       "type": "package",

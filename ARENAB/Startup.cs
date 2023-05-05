@@ -12,6 +12,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Authentication.Google;
 
 namespace ARENAB
 {
@@ -69,20 +71,94 @@ namespace ARENAB
             });
             services.AddAuthentication()
 
-                .AddGoogle(options =>
+                //.AddGoogle(options =>
+                //{
+                //    options.ClientId = "901866681619-0tdogiltirvgn3niq4bmrulc0mjurh36.apps.googleusercontent.com";
+                //    options.ClientSecret = "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";
+                //    options.CallbackPath = "/signin-google";
+                //})
+
+                //.AddOpenIdConnect(GoogleDefaults.AuthenticationScheme, options =>
+                //{
+                //    options.ClientId = "901866681619-0tdogiltirvgn3niq4bmrulc0mjurh36.apps.googleusercontent.com";
+                //    options.ClientSecret = "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";
+                //    options.Authority = "https://accounts.google.com/";
+                //    options.CallbackPath = "/signin-google";
+                //    options.SignedOutCallbackPath = "/signout-callback-google";
+                //    options.SaveTokens = true;
+                //    options.ResponseType = "code";
+                //    options.Scope.Add("openid");
+                //    options.Scope.Add("profile");
+                //    options.Events.OnTicketReceived = context =>
+                //    {
+                //        // You can customize the claims here.
+                //        return Task.CompletedTask;
+                //    };
+                //    options.Events.OnRemoteFailure = context =>
+                //    {
+                //        context.Response.Redirect("/error?FailureMessage=" + context.Failure.Message);
+                //        context.HandleResponse();
+                //        return Task.CompletedTask;
+                //    };
+                //})
+
+                .AddOpenIdConnect("Google Scheme Ejemplo", "Google Login", options =>
                 {
                     options.ClientId = "901866681619-0tdogiltirvgn3niq4bmrulc0mjurh36.apps.googleusercontent.com";
                     options.ClientSecret = "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";
+                    options.Authority = "https://accounts.google.com/";
                     options.CallbackPath = "/signin-google";
-                });
+                    options.SignedOutCallbackPath = "/signout-callback-google";
+                    options.SaveTokens = true;
+                    options.ResponseType = "code";
+                    options.Scope.Add("openid");
+                    options.Scope.Add("profile");
+                    options.Events.OnTicketReceived = context =>
+                    {
+                        // You can customize the claims here.
+                        return Task.CompletedTask;
+                    };
+                    options.Events.OnRemoteFailure = context =>
+                    {
+                        context.Response.Redirect("/error?FailureMessage=" + context.Failure.Message);
+                        context.HandleResponse();
+                        return Task.CompletedTask;
+                    };
+                })
 
-                //.AddFacebook(options=>
-                //{
-             
-                //}
-               /* )*/
+                   .AddOpenIdConnect("Panama Digital Autenticacion", "Panama Digital Login", options =>
+                   {
+                       options.ClientId = "901866681619-0tdogiltirvgn3niq4bmrulc0mjurh36.apps.googleusercontent.com";
+                       options.ClientSecret = "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";
+                       options.Authority = "https://accounts.google.com/";
+                       options.CallbackPath = "/signin-google";
+                       options.SignedOutCallbackPath = "/signout-callback-google";
+                       options.SaveTokens = true;
+                       options.ResponseType = "code";
+                       options.Scope.Add("openid");
+                       options.Scope.Add("profile");
+                       options.Events.OnTicketReceived = context =>
+                       {
+                           // You can customize the claims here.
+                           return Task.CompletedTask;
+                       };
+                       options.Events.OnRemoteFailure = context =>
+                       {
+                           context.Response.Redirect("/error?FailureMessage=" + context.Failure.Message);
+                           context.HandleResponse();
+                           return Task.CompletedTask;
+                       };
+                   })
 
-            
+                ;
+
+            //.AddFacebook(options=>
+            //{
+
+            //}
+            /* )*/
+
+
 
 
 
